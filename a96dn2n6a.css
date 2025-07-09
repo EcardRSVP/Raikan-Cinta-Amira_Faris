@@ -1,16 +1,14 @@
 body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
-  background-color: #fdf0e5; /* ✅ fallback peach lembut */
-  background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-  background-repeat: repeat;
+  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
   margin: 0;
   padding: 0;
   padding-bottom: 120px;
   position: relative;
+  
 }
-
 
 html {
   margin: 0;
@@ -27,8 +25,6 @@ html {
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
-  background: transparent !important; /* ✅ tiada warna hitam */
-  display: block !important;   /* ✅ pastikan ia tidak disembunyikan */
 }
 
 section {
@@ -133,8 +129,6 @@ body, html {
   padding: 20px;
   box-sizing: border-box;
   min-height: 100vh;
-  position: relative;  /* ✅ Tambah ini */
-  z-index: 1;           /* ✅ Tambah ini */
 }
 
 img {
@@ -155,8 +149,39 @@ h1, h2, p {
   p {
     font-size: 0.95rem;
   }
+}
 
- 
+  .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+
+.countdown-box {
+  width: 60px;
+  height: 65px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.countdown-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
 
 
   .footer {
@@ -434,12 +459,6 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   display: inline;
 }
 
-@media (max-width: 768px) {
-  .gallery-slide img {
-    max-height: 300px;
-  }
-}
-
     label {
       display: block;
       margin-top: 10px;
@@ -548,6 +567,20 @@ hr {
   z-index: 1;
 }
 
+/* Ubah video supaya tidak penuh satu skrin laptop */
+@media (min-width: 768px) {
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent !important;
+  }
+}
 
 .gift-item {
   display: flex;
@@ -605,36 +638,4 @@ hr {
     right: auto;
     transform: translateX(-50%);
   }
-}
-
- .countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-}
-
-.countdown-box {
-  width: 60px;
-  height: 65px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.countdown-number {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.countdown-label {
-  font-size: 0.75rem;
-  margin-top: 2px;
 }
