@@ -129,6 +129,8 @@ body, html {
   padding: 20px;
   box-sizing: border-box;
   min-height: 100vh;
+  position: relative;  /* ✅ Tambah ini */
+  z-index: 1;           /* ✅ Tambah ini */
 }
 
 img {
@@ -540,20 +542,6 @@ hr {
   width: 100%;
   position: relative;
   z-index: 1;
-}
-
-/* Ubah video supaya tidak penuh satu skrin laptop */
-@media (min-width: 768px) {
-  #bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    pointer-events: none;
-  }
 }
 
 
