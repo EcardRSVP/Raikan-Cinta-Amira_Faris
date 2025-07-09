@@ -435,10 +435,12 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 }
 
 .gallery-slide img {
-  height: 200px;
+  max-height: 500px;     /* tinggi maksima supaya gambar besar tapi masih muat */
   width: auto;
-  object-fit: cover;
+  object-fit: contain;   /* pastikan gambar tak terpotong */
   display: block;
+  margin: 0 auto;
+  border-radius: 8px;    /* pilihan: bagi rupa lembut */
 }
 
 .gallery-prev,
@@ -454,6 +456,12 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   width: auto;
   height: auto;
   display: inline;
+}
+
+@media (max-width: 768px) {
+  .gallery-slide img {
+    max-height: 300px;
+  }
 }
 
     label {
