@@ -25,7 +25,6 @@ html {
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
- background: transparent !important;
 }
 
 section {
@@ -150,7 +149,6 @@ h1, h2, p {
   p {
     font-size: 0.95rem;
   }
-}
 
   .countdown {
   display: flex;
@@ -437,12 +435,10 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 }
 
 .gallery-slide img {
-  max-height: 500px;     /* tinggi maksima supaya gambar besar tapi masih muat */
-  width: auto;
-  object-fit: contain;   /* pastikan gambar tak terpotong */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   display: block;
-  margin: 0 auto;
-  border-radius: 8px;    /* pilihan: bagi rupa lembut */
 }
 
 .gallery-prev,
@@ -567,6 +563,19 @@ hr {
   position: relative;
   z-index: 1;
 }
+
+/* Ubah video supaya tidak penuh satu skrin laptop */
+@media (min-width: 768px) {
+  #bg-video {
+    width: 390px;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    position: fixed;
+  }
+}
+
 
 .gift-item {
   display: flex;
