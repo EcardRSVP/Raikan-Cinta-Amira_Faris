@@ -18,13 +18,13 @@ html {
 /* 🎥 Latar Video */
 #bg-video {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
+  inset: 0;                   /* Ganti top:0, left:0, right:0, bottom:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* Pastikan video penuh ruang tanpa herot */
+  z-index: -1;                /* Di belakang content */
+  pointer-events: none;       /* Tak ganggu klik button di depan */
+  background-color: black;    /* Fallback kalau video tak load */
 }
 
 section {
