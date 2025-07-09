@@ -27,7 +27,7 @@ html {
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
-  background: none !important; /* ✅ tiada warna hitam */
+  background: transparent !important; /* ✅ tiada warna hitam */
   display: block !important;   /* ✅ pastikan ia tidak disembunyikan */
 }
 
