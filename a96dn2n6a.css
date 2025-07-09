@@ -575,12 +575,14 @@ hr {
 /* Ubah video supaya tidak penuh satu skrin laptop */
 @media (min-width: 768px) {
   #bg-video {
-    width: 390px;
-    height: 100vh;
+    position: fixed;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 390px;
+    height: 100vh;
     object-fit: cover;
-    position: fixed;
+    z-index: -1; /* ⬅️ Tambah baris ini */
   }
 }
 
