@@ -25,6 +25,7 @@ html {
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
+ background: transparent !important;
 }
 
 section {
@@ -565,21 +566,6 @@ hr {
   width: 100%;
   position: relative;
   z-index: 1;
-}
-
-/* Ubah video supaya tidak penuh satu skrin laptop */
-@media (min-width: 768px) {
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-  background: transparent !important;
-  }
 }
 
 .gift-item {
